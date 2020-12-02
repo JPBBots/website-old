@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://branding.jt3ch.net/jpbbots.png">
+    <script src='/bot.js'></script>
+    <title>JPBBots</title>
+  </head>
+  <body>
+    <h1 id="name">Loading...</h1>
+    <p id="description">Loading...</p>
+    <a href="/invite" id="invite">Invite</a>
+    <a href="#" id="topgg">View on Top.GG</a>
+    <a href="/support" id="support">Get Help</a>
+    <a href="#" id="topgg1">
+      <img src="#" id="topgg2" alt="" />
+    </a>
+
+    <script>
+      if (!window.bot) location.replace('/support')
+
+      document.title = `${bot.name} - JPBBots`
+
+      document.getElementById('name').innerText = bot.name
+      document.getElementById('description').innerText = bot.desc
+
+      document.getElementById('topgg').href = `https://top.gg/bot/${bot.id}`
+
+      document.getElementById('topgg1').href = `https://top.gg/bot/${bot.id}`
+
+      const topgg2 = document.getElementById('topgg2')
+      topgg2.src = `https://top.gg/api/widget/${bot.id}.svg`
+      topgg2.alt = bot.name
+    </script>
+  </body>
+</html>

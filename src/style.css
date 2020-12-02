@@ -1,0 +1,43 @@
+:root {
+  --background: #2C2F33;
+  --general: #99AAB5;
+  --text: #23272A;
+  --important: #7289DA;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  text-align: center;
+  background-color: var(--background);
+  margin: auto;
+  max-width: 350px;
+  margin-top: 5%
+}
+
+#name {
+  color: white
+}
+
+#description {
+  color: var(--general);
+}
+
+#invite, #topgg, #support {
+  background-color: var(--general);
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  color: var(--text);
+  display: inline-block;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+#invite {
+  background-color: var(--important)
+}
+
+#invite:hover, #topgg:hover, #support:hover {
+  transition: 0.2s;
+  opacity: 0.7;
+}
